@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/car_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_car_placeholder"/>
+
+        <RelativeLayout
+            android:id="@+id/car_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/car_image"
+            android:layout_marginStart="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/car_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="Car name"/>
+
+            <TextView
+                android:id="@+id/car_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/car_name"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:hint="Mileage"/>
+
+            <TextView
+                android:id="@+id/car_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/car_mileage"
+                android:textSize="16sp"
+                android:hint="Year or prod"/>
+
+            <TextView
+                android:id="@+id/car_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/car_year"
+                android:layout_alignParentEnd="true"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:hint="Price"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
