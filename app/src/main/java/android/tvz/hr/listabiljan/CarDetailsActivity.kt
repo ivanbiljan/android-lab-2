@@ -1,10 +1,10 @@
 package android.tvz.hr.listabiljan
 
-import Car
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.tvz.hr.listabiljan.databinding.ActivityCarDetailsBinding
+import android.tvz.hr.listabiljan.models.Car
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog

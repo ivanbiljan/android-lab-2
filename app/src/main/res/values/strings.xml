@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ListaBiljan</string>
+    <string name="notification_channel_name">Notification Channel</string>
 </resources>

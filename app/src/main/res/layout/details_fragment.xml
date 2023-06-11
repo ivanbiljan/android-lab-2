@@ -1,0 +1,174 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:label="Balls">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_car_placeholder" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ime"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/websiteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visit Website"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Osnovne informacije"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Make"
+            android:layout_gravity="center_horizontal|center_horizontal"
+            android:background="#f6f6f6"/>
+
+        <TextView
+            android:id="@+id/make"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="456546546"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"
+            android:background="#f6f6f6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Model"
+            android:layout_gravity="left"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="456546546"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Year of production"
+            android:layout_gravity="left"
+            android:background="#f6f6f6"/>
+
+        <TextView
+            android:id="@+id/yearOfProduction"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="456546546"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"
+            android:background="#f6f6f6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Condition"
+            android:layout_gravity="left"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="456546546"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Mileage"
+            android:layout_gravity="left"
+            android:background="#f6f6f6"/>
+
+        <TextView
+            android:id="@+id/mileage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="456546546"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"
+            android:background="#f6f6f6"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

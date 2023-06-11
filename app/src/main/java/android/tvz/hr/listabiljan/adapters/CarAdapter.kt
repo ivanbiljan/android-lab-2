@@ -1,14 +1,16 @@
 import android.net.Uri
 import android.tvz.hr.listabiljan.Helpers
+import android.tvz.hr.listabiljan.OnCarClickListener
 import android.tvz.hr.listabiljan.R
 import android.tvz.hr.listabiljan.databinding.CarRecyclerCardItemBinding
+import android.tvz.hr.listabiljan.models.Car
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class CarAdapter(private val carList: List<Car>, private val listener: (car: Car) -> Unit) :
+class CarAdapter(private val carList: List<Car>, private val listener: OnCarClickListener) :
     RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
@@ -54,7 +56,7 @@ class CarAdapter(private val carList: List<Car>, private val listener: (car: Car
 
         override fun onClick(view: View?) {
             if (view != null) {
-                listener.invoke(car)
+                listener?.handle(car)
             }
         }
     }
