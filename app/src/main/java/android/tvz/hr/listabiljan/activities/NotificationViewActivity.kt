@@ -1,4 +1,4 @@
-package android.tvz.hr.listabiljan
+package android.tvz.hr.listabiljan.activities
 
 import android.os.Bundle
 import android.tvz.hr.listabiljan.databinding.ActivityNotificationBinding

@@ -1,4 +1,4 @@
-package android.tvz.hr.listabiljan
+package android.tvz.hr.listabiljan.infrastructure
 
 import android.content.Context
 import android.util.Log

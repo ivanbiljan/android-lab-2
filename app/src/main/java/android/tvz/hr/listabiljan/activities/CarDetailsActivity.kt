@@ -1,10 +1,13 @@
-package android.tvz.hr.listabiljan
+package android.tvz.hr.listabiljan.activities
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.tvz.hr.listabiljan.Helpers
+import android.tvz.hr.listabiljan.ImageActivityExtra
+import android.tvz.hr.listabiljan.R
 import android.tvz.hr.listabiljan.databinding.ActivityCarDetailsBinding
-import android.tvz.hr.listabiljan.models.Car
+import android.tvz.hr.listabiljan.infrastructure.models.Car
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog

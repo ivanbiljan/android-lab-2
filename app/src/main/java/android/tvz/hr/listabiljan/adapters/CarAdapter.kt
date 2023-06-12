@@ -1,9 +1,8 @@
-import android.net.Uri
 import android.tvz.hr.listabiljan.Helpers
 import android.tvz.hr.listabiljan.OnCarClickListener
 import android.tvz.hr.listabiljan.R
 import android.tvz.hr.listabiljan.databinding.CarRecyclerCardItemBinding
-import android.tvz.hr.listabiljan.models.Car
+import android.tvz.hr.listabiljan.infrastructure.models.Car
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

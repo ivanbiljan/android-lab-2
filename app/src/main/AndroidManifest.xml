@@ -15,7 +15,7 @@
         android:theme="@style/Theme.ListaBiljan"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +24,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NotificationViewActivity"
-            android:parentActivityName=".MainActivity"
+            android:name=".activities.NotificationViewActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -33,15 +33,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CarDetailsActivity"
+            android:name=".activities.CarDetailsActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".ImageActivity"
+            android:name=".activities.ImageActivity"
             android:exported="true">
         </activity>
         <service
-            android:name=".FirebaseNotificationService"
+            android:name=".infrastructure.FirebaseNotificationService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -55,6 +55,19 @@
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
+        </receiver>
+
+        <receiver
+            android:label="Example Widget"
+            android:name="android.tvz.hr.listabiljan.widgets.CarWidgetProvider"
+            android:exported="false">
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/car_widget_info" />
         </receiver>
     </application>
 

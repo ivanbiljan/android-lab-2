@@ -1,10 +1,13 @@
-package android.tvz.hr.listabiljan
+package android.tvz.hr.listabiljan.fragments
 
-import android.tvz.hr.listabiljan.models.Car
+import android.tvz.hr.listabiljan.infrastructure.models.Car
 import CarAdapter
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.tvz.hr.listabiljan.*
+import android.tvz.hr.listabiljan.activities.CarDetailsActivity
+import android.tvz.hr.listabiljan.activities.ImageActivity
 import android.tvz.hr.listabiljan.databinding.DetailsFragmentBinding
 import android.view.LayoutInflater
 import android.view.View

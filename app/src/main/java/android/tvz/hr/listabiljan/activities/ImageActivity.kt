@@ -1,7 +1,7 @@
-package android.tvz.hr.listabiljan
+package android.tvz.hr.listabiljan.activities
 
 import android.os.Bundle
-import android.tvz.hr.listabiljan.databinding.ActivityMainBinding
+import android.tvz.hr.listabiljan.ImageActivityExtra
 import android.tvz.hr.listabiljan.databinding.ImageActivityBinding
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide

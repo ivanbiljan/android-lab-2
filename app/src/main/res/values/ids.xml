@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="widgetCarName" type="id"></item>
+    <item name="widgetCarMake" type="id"></item>
+    <item name="widgetCarModel" type="id"></item>
+    <item name="widgetCarYear" type="id"></item>
+</resources>
