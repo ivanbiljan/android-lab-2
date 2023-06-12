@@ -28,7 +28,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.google.firebase.messaging.RemoteMessage
 
-class MainActivity : AppCompatActivity(), OnCarClickListener {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
 
@@ -49,6 +49,32 @@ class MainActivity : AppCompatActivity(), OnCarClickListener {
 
         FirebaseNotificationService.onMessageReceived = { message, context ->
             onNotificationReceived(message, context)
+        }
+
+        viewModel.selectedItem.observe(this) { car ->
+            if (binding.mainActivityDetailsFragmentContainer == null) {
+                val intent = Intent(this, CarDetailsActivity::class.java)
+                intent.putExtra(CarDetailsActivity.PARCELABLE_EXTRA_KEY, car)
+
+                val detailsActivityOptions = ActivityOptions.makeCustomAnimation(
+                    this,
+                    R.anim.slide_in_right,
+                    R.anim.slide_out_left
+                )
+                startActivity(intent, detailsActivityOptions.toBundle())
+            }
+            else {
+                supportFragmentManager.commit {
+                    setReorderingAllowed(true)
+                    addToBackStack(null)
+                    replace<DetailsFragment>(
+                        R.id.main_activity_details_fragment_container,
+                        args = Bundle().apply {
+                            putParcelable("car_key", car)
+                        }
+                    )
+                }
+            }
         }
 
         if (savedInstanceState == null) {
@@ -98,34 +124,6 @@ class MainActivity : AppCompatActivity(), OnCarClickListener {
         val notificationManager =
             getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, builder.build())
-    }
-
-
-    override fun handle(car: Car) {
-        if (binding.mainActivityDetailsFragmentContainer == null) {
-            val intent = Intent(this, CarDetailsActivity::class.java)
-            intent.putExtra(CarDetailsActivity.PARCELABLE_EXTRA_KEY, car)
-
-            val detailsActivityOptions = ActivityOptions.makeCustomAnimation(
-                this,
-                R.anim.slide_in_right,
-                R.anim.slide_out_left
-            )
-            startActivity(intent, detailsActivityOptions.toBundle())
-
-            return
-        }
-
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            addToBackStack(null)
-            replace<DetailsFragment>(
-                R.id.main_activity_details_fragment_container,
-                args = Bundle().apply {
-                    putParcelable("car_key", car)
-                }
-            )
-        }
     }
 
     companion object {

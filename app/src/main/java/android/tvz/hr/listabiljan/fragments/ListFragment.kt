@@ -46,7 +46,10 @@ class ListFragment : Fragment() {
         lifecycleScope.launch(Dispatchers.IO) {
             lifecycleScope.launch {
                 binding.recyclerView.apply {
-                    adapter = CarAdapter(viewModel.getAllCars(), clickListener)
+                    adapter = CarAdapter(viewModel.getAllCars()) { car ->
+                        viewModel.selectItem(car)
+                    }
+
                     layoutManager = LinearLayoutManager(this@ListFragment.requireActivity())
                 }
             }
