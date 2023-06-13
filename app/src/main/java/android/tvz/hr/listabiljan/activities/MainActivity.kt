@@ -1,6 +1,5 @@
 package android.tvz.hr.listabiljan.activities
 
-import android.tvz.hr.listabiljan.infrastructure.models.Car
 import android.app.ActivityOptions
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,7 +11,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.tvz.hr.listabiljan.infrastructure.FirebaseNotificationService
-import android.tvz.hr.listabiljan.OnCarClickListener
 import android.tvz.hr.listabiljan.R
 import android.tvz.hr.listabiljan.databinding.ActivityMainBinding
 import android.tvz.hr.listabiljan.fragments.DetailsFragment

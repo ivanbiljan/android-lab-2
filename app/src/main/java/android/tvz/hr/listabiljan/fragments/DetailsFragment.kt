@@ -21,10 +21,6 @@ class DetailsFragment : Fragment() {
     private var _binding: DetailsFragmentBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var carAdapter: CarAdapter
-    private val _carList = MutableLiveData<List<Car>>()
-    private lateinit var clickListener: OnCarClickListener;
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
